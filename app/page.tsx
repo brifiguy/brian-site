@@ -17,15 +17,16 @@ export default function HomePage() {
       <header className="w-full px-6 py-5 flex justify-between items-center shadow-md sticky top-0 bg-white dark:bg-zinc-900 z-50">
         <h1 className="text-2xl font-bold tracking-wide italic">brian.is</h1>
         <nav className="space-x-3 text-sm font-medium flex items-center">
-          {links.map(({ href, label, download }, idx) => {
-            const props = {
-              key: `${href}-${idx}`,
-              href,
-              className: "hover:text-indigo-600 transition-colors duration-150"
-            };
-            if (download) props.download = true;
-            return <a {...props}>{label}</a>;
-          })}
+          {links.map(({ href, label, download }, idx) => (
+            <a
+              key={`${href}-${idx}`}
+              href={href}
+              {...(download ? { download: true } : {})}
+              className="hover:text-indigo-600 transition-colors duration-150"
+            >
+              {label}
+            </a>
+          ))}
         </nav>
       </header>
       <main className="px-6 py-24 max-w-5xl mx-auto space-y-32 text-left">
@@ -58,3 +59,4 @@ export default function HomePage() {
     </div>
   );
 }
+
