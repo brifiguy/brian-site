@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 
 export default function HomePage() {
   const links = [
@@ -35,7 +35,22 @@ export default function HomePage() {
             Systems thinker. Aspiring builder of tools. Lover of design thinking. Language nerd. Weekend chef.
           </p>
         </section>
-        {/* Other sections omitted for brevity */}
+
+        <section id="articles" className="space-y-6 scroll-mt-24">
+          <h2 className="text-4xl font-bold flex items-center justify-center gap-2">
+            <span role="img" aria-label="Projects">🧰</span> Projects
+          </h2>
+          <div className="grid sm:grid-cols-1 place-items-center">
+            <div className="p-6 border rounded-xl space-y-3 max-w-md w-full mx-auto text-left">
+              <h3 className="text-xl font-semibold">NYT Recipe Emailer</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                A Python script that scrapes NYT Cooking and emails me a grocery list. Automation + food = 🧡
+              </p>
+              <a href="#" className="text-indigo-600 underline">Read more</a>
+            </div>
+          </div>
+        </section>
+
         <footer className="text-sm text-center text-gray-600 dark:text-gray-400 pt-24 pb-12 border-t">
           © {new Date().getFullYear()} Brian. Built with clarity, code, and curiosity.
         </footer>
